@@ -18,11 +18,19 @@ class Header extends Component {
           bgcolor="primary.main"
         >
           <Grid item>
-            <img
-              height={40}
-              src={process.env.PUBLIC_URL + "/logo192.png"}
-              alt="logo"
-            />
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                this.props.onChangePage("main");
+              }}
+            >
+              <img
+                height={40}
+                src={process.env.PUBLIC_URL + "/logo192.png"}
+                alt="logo"
+              />
+            </a>
           </Grid>
           <Grid item>
             <Grid container spacing={10}>
@@ -49,7 +57,11 @@ class Header extends Component {
                 <SearchSharpIcon></SearchSharpIcon>
               </Grid>
               <Grid item>
-                <Button>
+                <Button
+                  onClick={() => {
+                    this.props.onChangePage("Login");
+                  }}
+                >
                   <Box color="white">Sign In</Box>
                 </Button>
               </Grid>
