@@ -53,7 +53,7 @@ Also you can always take a look at how justification works in your text editor o
 ## Examples
 
 ```
-내가 뭘 놓치고 있는지 모르겠다...
+내가 뭘 놓치고 있는지 모르겠다...  702 / 719
 ```
 
 ### solution
@@ -62,8 +62,6 @@ Also you can always take a look at how justification works in your text editor o
 def make_space(answer, array, width, length):
     string = ""
     if len(array) == 1:
-        for i in range(width-length):
-            string += " "
         string += array[0]
         answer.append(string)
         return 
