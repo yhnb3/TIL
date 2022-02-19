@@ -1,14 +1,10 @@
 import "./App.css";
-import Button from "./components/3-7 HOC/Button";
-import Input from "./components/3-7 HOC/Input";
+import Memo from "./components/3-8 Memo/Memo";
 
 function App() {
   return (
     <div className="App">
-      <Input />
-      <br />
-      <br />
-      <Button />
+      <Memo />
     </div>
   );
 }
