@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export default function withLoading(Component) {
   const WithLoadingComponent = (props) => {
+    console.log(props);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
