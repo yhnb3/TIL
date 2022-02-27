@@ -6,7 +6,7 @@ import Button from "./components/3-7 HOC/Button";
 function App() {
   return (
     <div className="App">
-      <Input />
+      <Input hi="hi" />
       <Button />
     </div>
   );
