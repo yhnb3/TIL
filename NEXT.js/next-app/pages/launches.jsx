@@ -28,7 +28,7 @@ export default function Launches({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch("https://api.spacexdata.com/v3/launches");
   const data = await res.json();
   console.log("getServerProps");
@@ -37,3 +37,13 @@ export async function getServerSideProps() {
     props: { data },
   };
 }
+
+// export async function getServerSideProps() {
+//   const res = await fetch("https://api.spacexdata.com/v3/launches");
+//   const data = await res.json();
+//   console.log("getServerProps");
+
+//   return {
+//     props: { data },
+//   };
+// }
