@@ -3,7 +3,7 @@ import Head from "next/head";
 import Layout from "../../components/layout";
 import Date from "../../components/date";
 
-import { getAllPostIds, getPostData } from "../../libs/posts";
+import { getPostData } from "../../libs/posts";
 
 import utilStyles from "../../styles/utils.module.css";
 
@@ -25,10 +25,10 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  // const paths = getAllPostIds();
   return {
-    paths,
-    fallback: false,
+    paths: [{ params: { id: "ssg-ssr" } }],
+    fallback: "blocking",
   };
 }
 
