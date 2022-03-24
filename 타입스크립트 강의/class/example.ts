@@ -1,7 +1,14 @@
-class Person {
-  constructor(public name: string, public age: number){} // 프로퍼티에 대한 선언 맟 할당없이 초기화 가능하다.
-} 
+abstract class AbstractPerson {          //new로 무언가를 할 수 없다. 오직 상속만을 하기 위한 클래스이다.
+  protected _name: string = "Mark"
 
-const p1 = new Person("Mark", 39);
+  abstract setName(name: string): void;
+}
 
-console.log(p1)
+class Person extends AbstractPerson {
+  public setName(name: string): void {
+    this._name = name
+  }
+}
+
+const p = new Person()
+p.setName("강우")

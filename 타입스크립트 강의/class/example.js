@@ -1,9 +1,13 @@
 "use strict";
-class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    } // 프로퍼티에 대한 선언 없이 초기화 가능하다.
+class AbstractPerson {
+    constructor() {
+        this._name = "Mark";
+    }
 }
-const p1 = new Person("Mark", 39);
-console.log(p1);
+class Person extends AbstractPerson {
+    setName(name) {
+        this._name = name;
+    }
+}
+const p = new Person();
+p.setName("강우");
