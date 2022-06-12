@@ -31,7 +31,7 @@
 
 함수 리터럴 -> 할당이 되지 않기 때문에 type error를 일으킨다.
 
-#### 과연 const와 var은 호이스팅 되지 않는 것일까?
+#### 과연 const와 let은 호이스팅 되지 않는 것일까?
 
 `const`와 `let`이 `var`과 다른점은 Temporal Dead Zone의 제약을 받는 것이다. 
 
