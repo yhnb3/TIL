@@ -1,7 +1,7 @@
 ### callback 과 Promise
 
 ```js
-function ad10(a, callback) {
+function add10(a, callback) {
   setTimeout(() => callback(a+10), 100)
 }
 
